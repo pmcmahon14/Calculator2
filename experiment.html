@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+</head>
+<body>
+<button onclick="powers()">A Higher Power</button>
+<p id="demo"></p>
+<script>
+    function powers() {
+        document.getElementById("demo").innerHTML = Math.pow(2,8);
+    }
+</script>
+
+
+<button onclick="damn_mortgage_payments()">Housing Bubble!</button>
+<p id="demo2"></p>
+<script>
+    function damn_mortgage_payments() {
+        document.getElementById("demo2").innerHTML = Math.pow(2,8);
+    }
+</script>
+
+
+<button onclick="factorial()">What's a Factorial?</button>
+<p id="demo3"></p>
+<script>
+    var n = 1;
+    function factorial() {
+
+        for (var i = 5; i > 0; i--) {
+            n = n*i;
+            console.log(n);
+        }
+        document.getElementById("demo3").innerHTML = n;
+    }
+    </script>
+    </body>
+    </html>
