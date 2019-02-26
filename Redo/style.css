@@ -2,7 +2,7 @@
     margin: auto;
     background-color: lightgray;
     width: 400px;
-    height: 700px;
+    height: 600px;
 }
 
 #display {
@@ -22,4 +22,8 @@ button {
     margin: auto;
     width: 80px;
     height: 80px;
+}
+
+.keyboard {
+    padding: 30px;
 }
