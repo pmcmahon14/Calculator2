@@ -5,9 +5,21 @@
     height: 700px;
 }
 
-.display {
+#display {
     margin: auto;
+    background-color: white;
     border: 1px solid white;
+    border-radius: 5px;
     width: 90%;
     height: 100px;
+}
+
+.row {
+    margin: auto;
+}
+
+button {
+    margin: auto;
+    width: 80px;
+    height: 80px;
 }
