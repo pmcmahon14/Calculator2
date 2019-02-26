@@ -1,0 +1,13 @@
+.container {
+    margin: auto;
+    background-color: lightgray;
+    width: 400px;
+    height: 700px;
+}
+
+.display {
+    margin: auto;
+    border: 1px solid white;
+    width: 90%;
+    height: 100px;
+}
