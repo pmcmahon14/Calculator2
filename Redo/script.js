@@ -1,23 +1,20 @@
-const math = [];
+let displayVal = '';
 
 function detectButton(event) {
-    const button = event.path[0].value;
-    console.log(button);
-    console.log(typeof button);
-    const buttonClass = event.path[0].className;
+    const button = event.target.innerText;
+    //
+    const buttonClass = event.target.className;
+
     if (buttonClass === 'number') {
-        //parseFloat(button);
-        math.push(button);
-        document.querySelector('#display').innerHTML = math.toString();
-        console.log(math);
-        console.log(typeof math[0]);
+        document.querySelector('#display').innerHTML = displayVal;
+        console.log(displayVal);
+        displayVal += button;
+        console.log(displayVal);
     } else {
-        math.push(button);
-        console.log(math);
+        //math.push(button);
+        console.log(displayVal);
     }
 
 }
 
 document.addEventListener("click", detectButton);
-    console.log(event);
-    //console.log(typeof parseFloat(button));
