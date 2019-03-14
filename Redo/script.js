@@ -32,13 +32,13 @@ var checkButtonType = (button, buttonClass) => {
             //displayVal = 0;
             document.querySelector('#display').innerHTML = 0;
             displayVal = '';
-            prevButtonType, buttonClass = null;
+            prevButtonType = null;
+            buttonClass = null;
             console.log(displayVal, prevButtonType, button, buttonClass);
     }
 };
 
 var updateDisplay = (button, buttonClass) => {
-    console.log(button, buttonClass);
     displayVal += button;
     document.querySelector('#display').innerHTML = displayVal;
 
