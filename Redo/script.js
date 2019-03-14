@@ -29,8 +29,8 @@ var checkButtonType = (button, buttonClass) => {
             displayVal = (document.querySelector('#display').innerHTML = eval(displayVal));
             break;
         case 'clear':
-            displayVal = 0;
-            document.querySelector('#display').innerText = displayVal;
+            //displayVal = 0;
+            document.querySelector('#display').innerHTML = 0;
             displayVal = '';
             prevButtonType, buttonClass = null;
             console.log(displayVal, prevButtonType, button, buttonClass);
