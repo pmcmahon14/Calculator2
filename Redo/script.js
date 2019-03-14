@@ -1,5 +1,6 @@
 let displayVal = '';
 let prevButtonType = null;
+let partString = '';
 
 var checkButtonType = (button, buttonClass) => {
     switch (buttonClass) {
@@ -26,7 +27,13 @@ var checkButtonType = (button, buttonClass) => {
             break;
         case 'equal':
             displayVal = (document.querySelector('#display').innerHTML = eval(displayVal));
-
+            break;
+        case 'clear':
+            displayVal = 0;
+            document.querySelector('#display').innerText = displayVal;
+            displayVal = '';
+            prevButtonType, buttonClass = null;
+            console.log(displayVal, prevButtonType, button, buttonClass);
     }
 };
 
