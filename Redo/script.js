@@ -26,7 +26,8 @@ var checkButtonType = (button, buttonClass) => {
             }
             break;
         case 'equal':
-            displayVal = (document.querySelector('#display').innerHTML = eval(displayVal));
+            //TODO FIX .O ANSWER FOR DECIMAL NUMBERS
+            displayVal = (document.querySelector('#display').innerHTML = (eval(displayVal).toPrecision(2)));
             break;
         case 'clear':
             //displayVal = 0;
