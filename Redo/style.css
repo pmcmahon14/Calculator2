@@ -18,10 +18,17 @@
     margin: auto;
 }
 
-button {
+.basic {
     margin: auto;
-    width: 80px;
-    height: 80px;
+    width: 64px;
+    height: 48px;
+}
+
+.advanced {
+    margin: auto;
+    width: 64px;
+    height: 32px;
+    margin-bottom: 5px;
 }
 
 .keyboard {
