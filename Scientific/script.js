@@ -37,6 +37,8 @@ var checkButtonType = (button, buttonClass) => {
             prevButtonType = null;
             buttonClass = null;
             console.log(displayVal, prevButtonType, button, buttonClass);
+            break;
+            case ''
     }
 };
 
