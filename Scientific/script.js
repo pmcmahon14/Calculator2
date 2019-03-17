@@ -4,11 +4,11 @@ let partString = '';
 
 var checkButtonType = (button, buttonClass) => {
     switch (buttonClass) {
-        case 'number':
+        case 'number basic':
             prevButtonType = buttonClass;
             updateDisplay(button, buttonClass);
             break;
-        case 'operator':
+        case 'operator basic':
             if (prevButtonType === 'operator') {
                 return;
             } else {
@@ -16,7 +16,7 @@ var checkButtonType = (button, buttonClass) => {
                 updateDisplay(button, buttonClass);
             }
             break;
-        case 'decimal':
+        case 'decimal basic':
             const array = displayVal.split('');
             if (array.includes('.')) {
                 return;
@@ -25,11 +25,12 @@ var checkButtonType = (button, buttonClass) => {
                 updateDisplay(button, buttonClass);
             }
             break;
-        case 'equal':
+        case 'equal basic':
             //TODO FIX .O ANSWER FOR DECIMAL NUMBERS
+            //TODO SET UP ERROR FOR DIV/0
             displayVal = (document.querySelector('#display').innerHTML = (eval(displayVal).toPrecision(3)));
             break;
-        case 'clear':
+        case 'clear basic':
             //displayVal = 0;
             document.querySelector('#display').innerHTML = 0;
             displayVal = '';
