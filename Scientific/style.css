@@ -12,6 +12,15 @@
     border-radius: 5px;
     width: 90%;
     height: 100px;
+    font-size: 16px;
+    /*72 is 10
+    @60px is 12 digits
+    48 is 15
+    40 is 18
+    32 is 22
+    24 is 30
+    normal (16) is 45
+    */
 }
 
 .row {
@@ -28,7 +37,6 @@
     margin: auto;
     width: 64px;
     height: 32px;
-    margin-bottom: 15px;
 }
 
 .keyboard {

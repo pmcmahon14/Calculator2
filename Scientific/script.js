@@ -1,6 +1,5 @@
 let displayVal = '';
 let prevButtonType = null;
-let partString = '';
 
 var checkButtonType = (button, buttonClass) => {
     switch (buttonClass) {
@@ -9,7 +8,7 @@ var checkButtonType = (button, buttonClass) => {
             updateDisplay(button, buttonClass);
             break;
         case 'operator basic':
-            if (prevButtonType === 'operator') {
+            if (prevButtonType === 'operator basic') {
                 return;
             } else {
                 prevButtonType = buttonClass;
@@ -25,10 +24,13 @@ var checkButtonType = (button, buttonClass) => {
                 updateDisplay(button, buttonClass);
             }
             break;
+        case 'percent':
+
         case 'equal basic':
             //TODO FIX .O ANSWER FOR DECIMAL NUMBERS
             //TODO SET UP ERROR FOR DIV/0
-            displayVal = (document.querySelector('#display').innerHTML = (eval(displayVal).toPrecision(3)));
+            displayVal = (document.querySelector('#display').innerHTML = eval(displayVal));
+            //displayVal = (document.querySelector('#display').innerHTML = (eval(displayVal).toPrecision(3)));
             break;
         case 'clear basic':
             //displayVal = 0;
@@ -38,11 +40,15 @@ var checkButtonType = (button, buttonClass) => {
             buttonClass = null;
             console.log(displayVal, prevButtonType, button, buttonClass);
             break;
-            case ''
+
     }
 };
 
-var updateDisplay = (button, buttonClass) => {
+const number = (button, buttonClass) => {
+
+};
+
+var updateDisplay = (button) => {
     displayVal += button;
     document.querySelector('#display').innerHTML = displayVal;
 
